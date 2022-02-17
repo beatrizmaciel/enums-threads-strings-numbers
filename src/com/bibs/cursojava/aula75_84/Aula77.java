@@ -17,7 +17,7 @@ public class Aula77 {
 		System.out.println(jav);
 		
 		// seria o mesmo que
-		for (int i = 0; i < 3; i++, j++) {
+		for (int i = 0, j = 0; i < 3; i++, j++) {
 			jav[j] = java.charAt(i);
 		}
 		
