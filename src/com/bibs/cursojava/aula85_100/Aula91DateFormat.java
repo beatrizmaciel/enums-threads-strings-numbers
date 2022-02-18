@@ -2,6 +2,7 @@ package com.bibs.cursojava.aula85_100;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.zip.DataFormatException;
@@ -44,15 +45,26 @@ public class Aula91DateFormat {
 				DateFormat.MEDIUM, DateFormat.SHORT).format(hoje);
 		System.out.println(hojeFormatado);
 		
-//		String data = "12-02-2017 14:25";
-//		try {
-//			Date dataDate = DateFormat.getInstance().parse(data);
-//			System.out.println(dataDate);
-//		} catch (ParseException e) {
-//			e.printStackTrace();
-//		}
+		String data = "12/02/2017 14:25";
+		try {
+			Date dataDate = DateFormat.getInstance().parse(data);
+			System.out.println(dataDate);
+			
+			Calendar calendario = Calendar.getInstance();
+			calendario.setTime(dataDate);
+			
+			System.out.println(calendario);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		
 		
 	}
 
 }
+
+/** 
+ * Quando trabalhamos com o Locale costumamos usar também o DateFormat.
+ * Para especificar o formato da data usamos o SimpleDateFormat
+ * 
+ */
